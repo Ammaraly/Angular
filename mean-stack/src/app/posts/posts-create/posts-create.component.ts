@@ -6,11 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./posts-create.component.css']
 })
 export class PostsCreateComponent {
-  newPost = "NO CONTENT"
+  DEFAULT_PLACEHOLDER = "Write something for your new post..."
+  postContent: string = '';
+  postInput: string = '';
   constructor() { }
 
   onSavePost() {
-    console.log("Post Saved!");
+    this.postContent = this.postInput
   }
 
 }
