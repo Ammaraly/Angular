@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./posts-create.component.css']
 })
 export class PostsCreateComponent {
-
+  newPost = "NO CONTENT"
   constructor() { }
 
   onSavePost() {
