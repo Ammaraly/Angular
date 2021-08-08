@@ -1,0 +1,18 @@
+mat-card {
+  background-color: rgb(255, 230, 255);
+  width: 70%;
+  margin: auto;
+}
+
+mat-form-field, textarea {
+  width: 100%;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+button {
+  position: absolute;
+  right: 1rem;
+  bottom: .5rem;
+}
+

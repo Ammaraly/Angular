@@ -1,4 +1,13 @@
-<textarea cols="30" rows="6" [placeholder]="DEFAULT_PLACEHOLDER" [(ngModel)]="postInput"></textarea>
-<hr>
-<button (click)="onSavePost()">Save Post</button>
-<p>{{postContent}}</p>
+<mat-card>
+  <mat-form-field appearance="outline">
+    <mat-label>Textarea</mat-label>
+    <textarea cols="30" rows="6" [placeholder]="DEFAULT_PLACEHOLDER" [(ngModel)]="postInput" matInput></textarea>
+  </mat-form-field>
+  <button (click)="onSavePost()" mat-raised-button color="primary">Save Post</button>
+</mat-card>
+<div *ngIf="postContent">
+  <hr>
+  <mat-card>
+    <p>{{postContent}}</p>
+  </mat-card>
+</div>
