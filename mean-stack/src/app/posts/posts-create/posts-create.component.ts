@@ -9,4 +9,8 @@ export class PostsCreateComponent {
 
   constructor() { }
 
+  onSavePost() {
+    console.log("Post Saved!");
+  }
+
 }
