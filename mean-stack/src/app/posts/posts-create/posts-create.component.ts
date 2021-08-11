@@ -1,4 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+
+export interface Post {
+  title: string,
+  content: string,
+}
+
 
 @Component({
   selector: 'app-posts-create',
@@ -7,12 +13,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostsCreateComponent {
   DEFAULT_PLACEHOLDER = "Write something for your new post..."
+  postTitle: string = '';
   postContent: string = '';
-  postInput: string = '';
+  @Output() postCreated = new EventEmitter();
   constructor() { }
 
   onSavePost() {
-    this.postContent = this.postInput
+    this.postCreated.emit({ title: this.postTitle, content: this.postContent });
   }
-
 }
