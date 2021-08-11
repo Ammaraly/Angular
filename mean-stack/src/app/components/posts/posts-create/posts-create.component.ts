@@ -1,10 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-
-export interface Post {
-  title: string,
-  content: string,
-}
-
+import { Post } from 'src/app/models/post/post.model';
 
 @Component({
   selector: 'app-posts-create',
@@ -12,10 +7,9 @@ export interface Post {
   styleUrls: ['./posts-create.component.css']
 })
 export class PostsCreateComponent {
-  DEFAULT_PLACEHOLDER = "Write something for your new post..."
   postTitle: string = '';
   postContent: string = '';
-  @Output() postCreated = new EventEmitter();
+  @Output() postCreated = new EventEmitter<Post>();
   constructor() { }
 
   onSavePost() {
