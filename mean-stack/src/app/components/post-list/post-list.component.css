@@ -1,0 +1,7 @@
+.info-text {
+  text-align: center;
+}
+
+mat-expansion-panel {
+  background-color: rgb(255, 230, 255);
+}

@@ -9,9 +9,9 @@ import { MatToolbarModule } from '@angular/material/toolbar'
 import { MatExpansionModule } from '@angular/material/expansion'
 
 import { AppComponent } from './app.component';
-import { PostsCreateComponent } from './components/posts/posts-create/posts-create.component';
+import { PostsCreateComponent } from './components/posts-create/posts-create.component';
 import { HeaderComponent } from './components/header/header.component';
-import { PostListComponent } from './components/posts/post-list/post-list.component';
+import { PostListComponent } from './components/post-list/post-list.component';
 
 @NgModule({
   declarations: [
